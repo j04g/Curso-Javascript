@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/main.js"> </script>
+    <title>Money Manager</title>
+
+       
+    </head>
+
+    <body onload="actualizarVista()">
+        <div class="container">
+            <header>
+                <h1>Gestor de gastos personales</h1>
+    
+                <h2> 
+                    <div class="campo">
+                        <label id="nombreUsuario"> </label>
+                        <input type="text" class="u-full-width" placeholder="Nombre de Usuario" id="nombreUsuario"/>
+                    </div>
+                </h2>
+                <div class="contenedor-principal contenido">
+                    <div class="row">
+                        <div id="pregunta">
+                            <h2>Coloca tu presupuesto</h2>
+                            <div id="msj_error_pregunta"></div>
+                            <form>
+                                <input type="number" id="presupuestoInicial" class="u-full-width" placeholder="Coloca tu presupuesto"/>
+                                <input type="button" onclick="guardarPresupuesto()" class="button-primary u-full-width" value="Crear Presupuesto" />
+    
+                            </form>
+    
+    
+                        </div>
+                        <div id="divGastos">
+                            <div class="one-half column">
+    
+                                <div id="divCrearGasto">
+                                    <form id="formGastos">
+                                        <h2>Money Manager</h2>
+                                        <div id="msj_error_creargasto"></div>
+                                        <div class="campo">
+                                            <label>Nombre Gasto</label>
+                                            <input type="text" class="u-full-width" placeholder="Ej. Transporte" id="tipoGasto"/>
+                                            
+                                        </div>
+                                        <div class="campo">
+                                            <label>Monto de Gasto</label>
+                                            <input type="number" class="u-full-width" placeholder="Ej. 300" id="cantidadGasto"/>
+    
+                                        </div>
+                                        <input type="button" onclick="agregarGasto()" class="button-primary u-full-width" value="Agregar Gasto" />
+    
+                                        <div class="campo">
+                                            <label>Nombre de Activo</label>
+                                            <input type="text" class="u-full-width" placeholder="Ej. Transporte" id="tipoActivo"/>
+                                            
+                                        </div>
+                                        <div class="campo">
+                                            <label>Monto de Activo </label>
+                                            <input type="number" class="u-full-width" placeholder="Ej. 300" id="cantidadActivo"/>
+    
+                                        </div>
+    
+                                        <input type="button" onclick="Activos()" class="button-primary u-full-width" value="Agregar Activo" />
+    
+    
+                                    </form>
+    
+    
+    
+    
+                                </div>
+    
+    
+                            </div>
+                            <div class="one-half column" id="divControlGastos">
+    
+                            </div>
+    
+                        </div>
+    
+                    </div>
+    
+                </div>
+            </header>
+    
+        </div>
+    </body>
+    </html>
